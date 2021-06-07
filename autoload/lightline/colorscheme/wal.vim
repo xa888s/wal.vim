@@ -6,7 +6,8 @@
 " =============================================================================
 
 let s:black = [ g:color0, 232 ]
-let s:gray = [ g:color8, 0 ]
+" g:color8
+let s:gray = [ '', 0 ]
 let s:white = [ g:color7, 7 ]
 let s:darkblue = [ g:color4, 4 ]
 let s:cyan = [ g:color6, 6 ]
