@@ -201,6 +201,59 @@ exe 'hi TSOperator guibg=NONE ctermbg=NONE ctermfg=4 guifg='.g:color4
 
 " }}}
 
+" lualine {{{
+
+lua << EOF
+function colors()
+	local colors = {
+	  black        = vim.g.color0,
+	  white        = vim.g.color7,
+	  red          = vim.g.color1,
+	  green        = vim.g.color2,
+	  blue         = vim.g.color4,
+	  yellow       = vim.g.color3,
+	  gray         = vim.g.color8,
+	  darkgray     = vim.g.color8,
+	  lightgray    = vim.g.color8,
+	  inactivegray = vim.g.color8,
+	}
+	return {
+	  normal = {
+	    a = {bg = colors.gray, fg = colors.black, gui = 'bold'},
+	    b = {bg = colors.lightgray, fg = colors.white},
+	    c = {bg = colors.darkgray, fg = colors.gray}
+	  },
+	  insert = {
+	    a = {bg = colors.blue, fg = colors.black, gui = 'bold'},
+	    b = {bg = colors.lightgray, fg = colors.white},
+	    c = {bg = colors.lightgray, fg = colors.white}
+	  },
+	  visual = {
+	    a = {bg = colors.yellow, fg = colors.black, gui = 'bold'},
+	    b = {bg = colors.lightgray, fg = colors.white},
+	    c = {bg = colors.inactivegray, fg = colors.black}
+	  },
+	  replace = {
+	    a = {bg = colors.red, fg = colors.black, gui = 'bold'},
+	    b = {bg = colors.lightgray, fg = colors.white},
+	    c = {bg = colors.black, fg = colors.white}
+	  },
+	  command = {
+	    a = {bg = colors.green, fg = colors.black, gui = 'bold'},
+	    b = {bg = colors.lightgray, fg = colors.white},
+	    c = {bg = colors.inactivegray, fg = colors.black}
+	  },
+	  inactive = {
+	    a = {bg = colors.darkgray, fg = colors.gray, gui = 'bold'},
+	    b = {bg = colors.darkgray, fg = colors.gray},
+	    c = {bg = colors.darkgray, fg = colors.gray}
+	  }
+  	}
+end
+EOF
+
+" }}}
+
 " Plugin options {{{
 
 let g:limelight_conceal_ctermfg = 8
