@@ -194,10 +194,10 @@ exe 'hi ALEWarning guibg=NONE ctermbg=NONE ctermfg=3 guifg='.g:color3
 
 " Neovim treesitter {{{
 
-hi TSInclude ctermbg=NONE ctermfg=5
-hi TSNamespace ctermbg=NONE ctermfg=4
-hi TSRepeat ctermbg=NONE ctermfg=5
-hi TSOperator ctermbg=NONE ctermfg=4
+exe 'hi TSInclude guibg=NONE ctermbg=NONE ctermfg=5 guifg='.g:color5
+exe 'hi TSNamespace guibg=NONE ctermbg=NONE ctermfg=4 guifg='.g:color4
+exe 'hi TSRepeat guibg=NONE ctermbg=NONE ctermfg=5 guifg='.g:color5
+exe 'hi TSOperator guibg=NONE ctermbg=NONE ctermfg=4 guifg='.g:color4
 
 " }}}
 
